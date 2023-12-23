@@ -1,0 +1,47 @@
+{
+  "name": "wechaty-ai-assistant",
+  "version": "0.1.0",
+  "description": "基于wechaty开发的智能聊天机器人",
+  "main": "dist/main.js",
+  "export": "dist/main.js",
+  "scripts": {
+    "dev": "nodemon --exec node --loader ts-node/esm src/main.ts",
+    "build": "tsc"
+  },
+  "author": "Tsing",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^1.6.2",
+    "dotenv": "^16.0.3",
+    "file-box": "^1.4.15",
+    "qrcode": "^1.5.1",
+    "wechaty": "^1.20.2",
+    "wechaty-puppet-engine": "1.0.25",
+    "wechaty-puppet-wechat4u": "^1.14.12"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.4",
+    "@types/qrcode": "^1.5.0",
+    "@types/uuid": "^9.0.0",
+    "nodemon": "^2.0.20",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.3.2",
+    "wechaty-puppet": "^1.20.2"
+  },
+  "nodemonConfig": {
+    "watch": [
+      "src/*.ts"
+    ],
+    "ignore": [
+      "src/main.ts"
+    ],
+    "ext": "ts",
+    "exec": "node --loader ts-node/esm src/main.ts",
+    "delay": 500
+  },
+  "type": "module",
+  "prettier": {
+    "tabWidth": 2,
+    "singleQuote": true
+  }
+}
